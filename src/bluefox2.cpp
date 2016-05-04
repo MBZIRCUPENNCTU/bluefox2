@@ -117,6 +117,12 @@ bool Bluefox2::GrabImage(sensor_msgs::Image &image_msg) {
   return true;
 }
 
+void Bluefox2::callbackAec(int &expose_us){
+    bool autoexpose = false;
+    SetAec(autoexpose, expose_us);
+}
+
+
 void Bluefox2::Configure(Bluefox2DynConfig &config) {
   // Clear request queue
   fi_->imageRequestReset(0, 0);

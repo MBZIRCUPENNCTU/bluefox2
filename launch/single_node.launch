@@ -12,9 +12,9 @@
     <arg name="fps" default="$(arg rate)"/>
 
     <arg name="idpf" default="0"/>
-    <arg name="aec" default="true"/>
+    <arg name="aec" default="false"/>
     <arg name="expose_us" default="10000"/>
-    <arg name="agc" default="true"/>
+    <arg name="agc" default="false"/>
     <arg name="gain_db" default="0.0"/>
     <arg name="cbm" default="0"/>
     <arg name="ctm" default="1"/>

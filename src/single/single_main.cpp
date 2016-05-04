@@ -7,6 +7,7 @@ int main(int argc, char **argv) {
   try {
     bluefox2::SingleNode single_node(pnh);
     single_node.Run();
+    ros::Subscriber sub_message = pnh.subscribe("exposure_time", 1, &bluefox2::SingleNode::callbackAec, &single_node);
     ros::spin();
     single_node.End();
   }

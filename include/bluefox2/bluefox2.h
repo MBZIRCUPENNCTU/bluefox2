@@ -28,6 +28,7 @@ class Bluefox2 {
   void SetMM(int mm) const;
   void SetMaster() const;
   void SetSlave() const;
+  void callbackAec(int &expose_us);
 
  private:
   std::string AvailableDevice() const;

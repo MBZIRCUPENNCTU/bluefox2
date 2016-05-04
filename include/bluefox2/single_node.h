@@ -3,6 +3,7 @@
 
 #include "bluefox2/Bluefox2DynConfig.h"
 #include <camera_base/camera_node_base.h>
+#include <std_msgs/Int32.h>
 
 namespace bluefox2 {
 
@@ -16,6 +17,7 @@ class SingleNode : public camera_base::CameraNodeBase<Bluefox2DynConfig> {
   virtual void Setup(Bluefox2DynConfig &config) override;
 
   void AcquireOnce();
+  void callbackAec(const std_msgs::Int32::ConstPtr &expose_us);
 
  private:
   boost::shared_ptr<Bluefox2Ros> bluefox2_ros_;

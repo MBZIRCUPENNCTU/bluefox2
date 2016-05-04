@@ -33,4 +33,10 @@ void SingleNode::Setup(Bluefox2DynConfig& config) {
   bluefox2_ros_->camera().Configure(config);
 }
 
+
+void SingleNode::callbackAec(const std_msgs::Int32::ConstPtr &expose_us) {
+    int exp_us = int(expose_us->data);
+    bluefox2_ros_->camera().callbackAec(exp_us);
+}
+
 }  // namepace bluefox2
